@@ -10,7 +10,7 @@ const Showmovies=()=>
     {
         return(
             
-          <div id={id} styles={{position:"absolute",width:"50%",left:"30%"}}>
+          <div key={id} styles={{position:"absolute",width:"50%",left:"30%"}}>
           <h3>{movie.name}</h3>
           <h2>{movie.rating}</h2>
 
