@@ -1,27 +1,27 @@
-import React,{createContext,useState} from 'react';
-export const ourContext=createContext();
+import React, { createContext, useState } from "react";
+export const ourContext = createContext();
 
-export const Provider=(props)=>
-{
-    const [movies,setmovies]=useState([{
-        name:"Doremon",
-        rating:5
+export const Provider = (props) => {
+  const [movies, setmovies] = useState([
+    {
+      name: "The Shawshank Redemption",
+      rating: 9.2,
     },
     {
-        name:"Sinchan",
-        rating:4.5
+      name: " The Godfather",
+      rating: 9.0,
     },
     {
-        name:"Cartoon",
-        rating:3
-    }]);
-    
-    return (<div>
+      name: " The Dark Knight ",
+      rating: 9.0,
+    },
+  ]);
 
-<ourContext.Provider value={[movies,setmovies]}>
-            {props.children}
-        </ourContext.Provider>
-    </div>)
-    
-
-}
+  return (
+    <div>
+      <ourContext.Provider value={[movies, setmovies]}>
+        {props.children}
+      </ourContext.Provider>
+    </div>
+  );
+};
